@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
-  "dependencies": {
-    "antlr4": "^4.13.2"
-  },
   "scripts": {
     "start": "node src/js/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "chevrotain": "^11.0.3",
+    "antlr4": "^4.13.2"
+  }
 }
