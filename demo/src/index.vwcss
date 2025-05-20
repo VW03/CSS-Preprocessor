@@ -1,0 +1,103 @@
+^^ Kind selector
+header > nav [
+    font-size -- 28pixels.
+]
+^^ Groep selector
+header, footer [
+    color -- #5323ff.
+]
+^^ Klasse selector:
+.title [
+    font-size -- 23pixels.
+    color -- #123abc.
+]
+.subtitle [
+    margin-top -- 2procent.
+]
+^^ Element selector:
+div [
+    background -- #bbe3ff.
+]
+^^ Attribuut selector
+ul |padding| [
+    padding -- 5procent.
+]
+li |padding="extra"| [
+    padding-left -- 5procent.
+]
+^^ Nesting selector:
+span [ a [
+    background-color -- #94a4f2.
+]]
+^^ Parent selector:
+p [
+    span [
+        color -- #9d62ff.
+    ]
+    <a [
+        background-color -- #c5afe8.
+    ]
+]
+^^ Alles selector
+* [
+    margin -- 2pixels. ^^ rond heel de pagina
+]
+^^--------------------------------------------^^
+^^ Variabelen
+€main-color :: #123abc.
+a [
+    color -- €main-color.
+]
+^^--------------------------------------------^^
+@mixin button(€bg-color: #ffffff, €text-color: #ffffff) [
+    background -- €bg-color.
+    color -- €text-color.
+    padding -- 10pixels.
+    border-radius -- 5pixels.
+    margin -- 2procent.
+]
+.m-button @includeer button(#94a4f2, #123abc).
+
+@mixin noparam() [
+    background -- #c996f2.
+    color -- #123abc.
+    padding -- 10pixels.
+    border-radius -- 5pixels.
+    margin -- 2procent.
+]
+.n-button @includeer noparam().
+^^--------------------------------------------^^
+^^ if-else:
+@als €main-color gelijk #123abc [
+  .button @includeer button(#9cf296, #123abc).
+]
+@anders [
+  .button @includeer button(#f29696, #123abc).
+]
+
+@als €main-color niet #123abc [
+  .else-button @includeer button(#9cf296, #123abc).
+]
+@anders [
+  .else-button @includeer button(#f29696, #123abc).
+]
+€size :: 10procent.
+@als €size groter 12 [
+  .if-button @includeer button(#c996f2, #123abc).
+]
+^^--------------------------------------------^^
+^^ for lus:
+@voor €i van 1 tot 3 [
+  .color_€i [
+    width -- €i * 20 pixels.
+  ]
+]
+^^ while lus:
+€j :: 1.
+@terwijl €j kleiner 4 [
+  .box_€j [
+    width -- €j * 2 procent.
+  ]
+  €j :: €j + 1.
+]
+^^--------------------------------------------^^

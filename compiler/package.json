@@ -1,0 +1,21 @@
+{
+  "name": "preprocessor",
+  "version": "1.0.0",
+  "author": "Vera Wise",
+  "license": "MIT",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/js/main.js",
+    "test": "vitest --run"
+  },
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "antlr4": "^4.13.2"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.1",
+    "webpack-cli": "^5.1.4"
+  }
+}

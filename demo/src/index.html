@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VWCSS Test Pagina</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+<header>
+    <nav>VWCSS Test Pagina</nav>
+    <div class="title">Alle mogelijke features staan op deze pagina!</div>
+</header>
+<main>
+    <div class="subtitle">Variabelen</div>
+    <a>Dit element (&lt;a&gt;) gebruikt een variabele "main-color" om de tekstkleur te veranderen.</a>
+
+    <div class="subtitle">CSS selectors</div>
+    <ul padding>
+        <li> De nav op deze pagina gebruikt een <a>kind</a> selector.</li>
+        <li> Elke titel op deze pagina gebruikt een <a>klasse</a> selector.</li>
+        <li> Er is een margin van 2 pixels rond heel de pagina door de <a>alles</a> selector.</li>
+        <li> Het &lt;article&gt; element voor de Nesting en Parent Selectors gebruikt een <a>id</a> selector.</li>
+        <li> De header en footer gebruiken een <a>groep</a> selector om dezelfde kleur te hebben.</li>
+        <li> Het element &lt;a&gt; op deze pagina gebruikt een <a>element</a> selector.</li>
+        <li> Het element &lt;ul&gt; op deze pagina gebruikt een <a>attribuut</a> selector.</li>
+        <li padding="extra"> Dit element &lt;li&gt; gebruikt dezelfde <a>attribuut</a> selector, maar met een specifieke waarde om meer padding links te hebben.</li>
+    </ul>
+    <div class="subtitle">Nesting en Parent Selector</div>
+    <article id="speciale_selectors">
+        <p>Nesting Selector:</p>
+        <span><a>Dit gaat een achtergrondkleur krijgen, omdat het genest zit (&lt;a&gt; in &lt;span&gt;).</a></span>
+        <br>
+        <a><span>Dit gaat geen achtergrondkleur krijgen, omdat het deze nesting (&lt;span&gt; in &lt;a&gt;) niet gedefineerd is.</span></a>
+
+        <p>Parent Selector:</p>
+        <p><span>Hier wordt de tekstkleur toegepast van de &lt;p&gt; &lt;span&gt;.</span></p>
+        <p><a>Hier wordt de achtergrondkleur toegepast van de &lt;p&gt; &lt;a&gt;.</a></p>
+        <p><p>Dit zijn 2 &lt;p&gt; elementen en hier wordt geen styling toegepast.</p></p>
+    </article>
+
+    <div class="subtitle">Mixins met/zonder Parameters</div>
+    <button class="m-button">Mixin Button Met Parameters</button>
+    <button class="n-button">Mixin Button Zonder Parameters</button>
+    <br><a>Alle buttons op deze pagina gebruiken mixins.</a>
+
+    <div class="subtitle">Controle Structuren</div>
+    <article >
+
+    <p>If/Else:</p>
+        Deze button geeft true op de conditie <a>&euro;main-color gelijk #123abc</a>. <button class="button">@if/@else</button>
+        <br>En deze button geeft true op de conditie <a>&euro;main-color niet #123abc</a>. <button class="else-button">@if/@else</button>
+        <br>En deze button heeft enkel een if conditie <a>&euro;size groter 12</a>. ('kleiner dan' kan ook via 'kleiner') <button class="if-button">@if</button>
+
+    <p>For:</p>
+        De 'width' vergroot telkens van met i*20 pixels in deze 3 &lt;div&gt; kleurblokken:
+        <div class="color_1">Kleurblok 1</div>
+        <div class="color_2">Kleurblok 2</div>
+        <div class="color_3">Kleurblok 3</div>
+
+    <p>While:</p>
+        Nu doen we iets gelijkaardigs met i*2 procent in een while voor deze 3 &lt;div&gt; kleurBoxen:
+        <div class="box_1">KleurBox 1</div>
+        <div class="box_2">KleurBox 2</div>
+        <div class="box_3">KleurBox 3</div>
+    </article>
+
+</main>
+<footer>
+    @Vera Wise IAO student op Karel de Grote Hogeschool.
+</footer>
+</body>
+</html>
